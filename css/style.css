@@ -258,12 +258,14 @@ img {
 }
 
 .btn i,
-.btn .icon-github {
+.btn .icon-github,
+.btn .icon-mail {
   font-size: 20px;
   line-height: 1;
 }
 
-.icon-github {
+.icon-github,
+.icon-mail {
   width: 1em;
   height: 1em;
   flex-shrink: 0;
@@ -497,7 +499,8 @@ img {
 }
 
 .contact-item i,
-.contact-item .icon-github {
+.contact-item .icon-github,
+.contact-item .icon-mail {
   flex-shrink: 0;
   font-size: 24px;
   color: var(--text-tertiary);
@@ -541,7 +544,8 @@ img {
 }
 
 .footer-links i,
-.footer-links .icon-github {
+.footer-links .icon-github,
+.footer-links .icon-mail {
   font-size: 16px;
 }
 
