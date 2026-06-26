@@ -223,7 +223,7 @@ img {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 15px;
   font-weight: 500;
   border: 1px solid transparent;
@@ -283,19 +283,18 @@ img {
 }
 
 /* ===== About ===== */
-.about-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 32px;
+.about-text {
+  border-left: 3px solid var(--accent);
+  padding-left: 24px;
+  max-width: 65ch;
 }
 
-.about-card p {
+.about-text p {
   color: var(--text-secondary);
   margin-bottom: 16px;
 }
 
-.about-card p:last-child {
+.about-text p:last-child {
   margin-bottom: 0;
 }
 
