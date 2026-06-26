@@ -210,8 +210,12 @@ img {
 /* ===== Skills ===== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
+}
+
+.skill-group:first-child {
+  grid-row: span 2;
 }
 
 .skill-group {
@@ -414,6 +418,10 @@ img {
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .skill-group:first-child {
+    grid-row: auto;
   }
 
   .edu-card {
