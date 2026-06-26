@@ -148,6 +148,11 @@ img {
   text-decoration: none;
 }
 
+.btn i {
+  font-size: 20px;
+  line-height: 1;
+}
+
 .btn-primary {
   background: #1f2328;
   color: #ffffff;
@@ -286,6 +291,7 @@ img {
   color: #656d76;
   display: flex;
   align-items: center;
+  font-size: 18px;
   transition: color 0.15s;
 }
 
@@ -375,8 +381,9 @@ img {
   text-decoration: none;
 }
 
-.contact-item svg {
+.contact-item i {
   flex-shrink: 0;
+  font-size: 24px;
   color: #656d76;
 }
 
