@@ -235,9 +235,16 @@ img {
   text-decoration: none;
 }
 
-.btn i {
+.btn i,
+.btn .icon-github {
   font-size: 20px;
   line-height: 1;
+}
+
+.icon-github {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -377,7 +384,7 @@ img {
   color: var(--text-tertiary);
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   transition: color 0.15s;
 }
 
@@ -467,7 +474,8 @@ img {
   text-decoration: none;
 }
 
-.contact-item i {
+.contact-item i,
+.contact-item .icon-github {
   flex-shrink: 0;
   font-size: 24px;
   color: var(--text-tertiary);
@@ -510,7 +518,8 @@ img {
   text-decoration: none;
 }
 
-.footer-links i {
+.footer-links i,
+.footer-links .icon-github {
   font-size: 16px;
 }
 
