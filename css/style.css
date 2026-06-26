@@ -155,7 +155,23 @@ img {
 /* ===== Hero ===== */
 .hero {
   padding: 100px 0 80px;
-  text-align: center;
+}
+
+.hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-avatar {
+  flex-shrink: 0;
+}
+
+.hero-avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
 }
 
 .hero-name {
@@ -163,26 +179,42 @@ img {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .hero-title {
   font-size: 20px;
   color: var(--text-tertiary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .hero-tagline {
   font-size: 16px;
   color: var(--text-muted);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero-links {
   display: flex;
   gap: 12px;
-  justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .hero-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
 }
 
 /* ===== Buttons ===== */
