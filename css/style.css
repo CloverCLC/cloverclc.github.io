@@ -233,10 +233,6 @@ img {
     width: 100px;
     height: 100px;
   }
-
-  .hero-links {
-    justify-content: center;
-  }
 }
 
 /* ===== Buttons ===== */
@@ -592,27 +588,89 @@ img {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  /* Nav: horizontal scroll on overflow */
+  .nav-inner {
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+  }
+
+  .nav-github .icon-github {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-links {
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 6px 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Container */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero */
   .hero {
-    padding: 72px 0 56px;
+    padding: 56px 0 48px;
   }
 
   .hero-name {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero-title {
-    font-size: 17px;
+    font-size: 16px;
   }
 
+  .hero-tagline {
+    font-size: 14px;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  /* Sections */
   .section {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
   .section-title {
-    font-size: 22px;
-    margin-bottom: 24px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
+  /* About: left border → top border */
+  .about-text {
+    border-left: none;
+    border-top: 3px solid var(--accent);
+    padding-left: 0;
+    padding-top: 16px;
+  }
+
+  /* Skills */
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -622,21 +680,40 @@ img {
     grid-row: auto;
   }
 
+  .skill-group {
+    padding: 20px;
+  }
+
+  /* Projects */
+  .project-card {
+    padding: 20px;
+  }
+
+  /* Education */
   .edu-card {
     flex-direction: column;
     gap: 8px;
+    padding: 20px;
   }
 
-  .nav-links {
-    gap: 2px;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    padding: 6px 8px;
-  }
-
+  /* Contact */
   .contact-item {
     width: 100%;
+    font-size: 15px;
+  }
+
+  .contact-item .icon-github,
+  .contact-item .icon-mail {
+    font-size: 20px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body {
+    font-size: 15px;
   }
 }
