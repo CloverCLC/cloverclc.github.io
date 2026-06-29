@@ -49,3 +49,37 @@
     observer.observe(el);
   });
 })();
+
+// Theme toggle (light / dark / auto)
+(function () {
+  var STORAGE_KEY = 'cloverclc-theme';
+  var html = document.documentElement;
+  var toggle = document.getElementById('theme-toggle');
+
+  if (!toggle) return;
+
+  // Apply saved theme or follow system
+  var saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === 'dark' || saved === 'light') {
+    html.setAttribute('data-theme', saved);
+  }
+  // No saved preference → system default (no attribute set)
+
+  toggle.addEventListener('click', function () {
+    var current = html.getAttribute('data-theme');
+    var next;
+
+    if (!current) {
+      // Currently following system → check system preference
+      var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      next = isDark ? 'light' : 'dark';
+    } else if (current === 'dark') {
+      next = 'light';
+    } else {
+      next = 'dark';
+    }
+
+    html.setAttribute('data-theme', next);
+    localStorage.setItem(STORAGE_KEY, next);
+  });
+})();
