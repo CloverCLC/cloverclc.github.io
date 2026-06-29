@@ -26,8 +26,8 @@
 
 // Scroll reveal with IntersectionObserver
 (function () {
-  var supportsReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (supportsReducedMotion) return;
+  var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motionQuery.matches) return;
 
   var observer = new IntersectionObserver(
     function (entries) {
@@ -47,6 +47,15 @@
   document.querySelectorAll('.reveal-stagger > *').forEach(function (el, i) {
     el.style.transitionDelay = i * 0.08 + 's';
     observer.observe(el);
+  });
+
+  // Re-check if user changes accessibility setting mid-session
+  motionQuery.addEventListener('change', function (e) {
+    if (e.matches) {
+      document.querySelectorAll('.reveal, .reveal-stagger > *').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
   });
 })();
 

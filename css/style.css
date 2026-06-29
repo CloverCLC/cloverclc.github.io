@@ -10,7 +10,6 @@
   --border-hover: #8b949e;
   --accent: #0969da;
   --accent-bg: #ddf4ff;
-  --accent-bg-alpha: rgba(9, 105, 218, 0.08);
   --nav-bg: rgba(255, 255, 255, 0.85);
   --tag-bg: #f3f4f6;
   --tag-color: #656d76;
@@ -36,7 +35,6 @@
   --border-hover: #484f58;
   --accent: #58a6ff;
   --accent-bg: rgba(56, 139, 253, 0.15);
-  --accent-bg-alpha: rgba(56, 139, 253, 0.1);
   --nav-bg: rgba(13, 17, 23, 0.85);
   --tag-bg: #21262d;
   --tag-color: #8b949e;
@@ -51,6 +49,9 @@
   --card-shadow: rgba(0, 0, 0, 0.3);
 }
 
+/* Mirror of [data-theme="dark"] above for system auto-detection.
+   The :not([data-theme="light"]) prevents overriding manual light mode.
+   Keep in sync with the [data-theme="dark"] block above. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0d1117;
@@ -316,7 +317,6 @@ img {
   text-decoration: none;
 }
 
-.btn i,
 .btn .icon-github,
 .btn .icon-mail {
   font-size: 20px;
@@ -562,7 +562,6 @@ img {
   text-decoration: none;
 }
 
-.contact-item i,
 .contact-item .icon-github,
 .contact-item .icon-mail {
   flex-shrink: 0;
@@ -607,7 +606,6 @@ img {
   text-decoration: none;
 }
 
-.footer-links i,
 .footer-links .icon-github,
 .footer-links .icon-mail {
   font-size: 16px;
